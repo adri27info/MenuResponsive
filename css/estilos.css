@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0px auto;
+}
+
+header nav {
+  width: 55%;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid black;
+}
+
+nav div.logo {
+  width: 75px;
+}
+
+div.logo img {
+  width: 100%;
+  vertical-align: top;
+}
+
+nav div.datos {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.datos ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+div.datos ul li {
+  padding: 20px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+div.datos div.menu {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.flex {
+  display: flex !important;
+}
+
+@media only screen and (max-width: 768px) {
+  div.datos ul li {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  header nav {
+    flex-flow: column wrap;
+    gap: 30px;
+  }
+
+  nav div.datos {
+    width: 100%;
+    flex-flow: column nowrap;
+  }
+
+  div.datos div.menu {
+    display: block;
+  }
+
+  div.datos ul {
+    flex-flow: row wrap;
+    order: 2;
+    display: none;
+  }
+}
